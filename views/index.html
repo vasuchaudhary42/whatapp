@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .best_friend {
+            color: green;
+        }
+        .normal_friend {
+            color: blue;
+        }
+        .shortname {
+            padding: 0;
+            height: 50px;
+            width: 50px;
+            background: antiquewhite;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container" style="padding: 20px ">
+      <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h2>User Detail</h2>
+                </div>
+            <div class="card-body">
+              <form class="form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                  <label for="firstname">Firstname</label>
+                  <input id="firstname" class="form-control" placeholder="Enter Your Firstname" data-bind="value:firstname">
+                </div>
+                <div class="form-group">
+                  <label for="lastname">Lastname</label>
+                  <input id="lastname" class="form-control" placeholder="Enter Your Lastname" data-bind="value:lastname">
+                </div>
+              </form>
+            </div>
+          </div>
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header">
+                    <h2>Add Friend</h2>
+                </div>
+            <div class="card-body">
+              <form class="form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                  <label for="friend_firstname">Firstname</label>
+                  <input id="friend_firstname" class="form-control" placeholder="Enter Your Firstname" data-bind="value:friend_firstname">
+                </div>
+                <div class="form-group">
+                  <label for="friend_lastname">Lastname</label>
+                  <input id="friend_lastname" class="form-control" placeholder="Enter Your Lastname" data-bind="value:friend_lastname">
+                </div>
+                <div class="form-group">
+                  <input id="bestFriend" type="checkbox" data-bind="checked:bestFriend">
+                  <label for="bestFriend">Is Best Friend</label>
+                </div>
+                <button type="submit" class="btn btn-primary" data-bind="click: addFriend">Save</button>
+              </form>
+            </div>
+          </div>
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header" data-bind="template: { name: 'heading'}">
+                </div>
+                <script type="text/html" id="heading"><h2>Form Data</h2></script>
+                <div class="card-body">
+                    <div style="display: flex; justify-content: space-between;align-items: center">
+                        <p>Name: <span class="badge badge-info" data-bind="text:name"></span></p>
+                        <div class="shortname" data-bind="text:shortname"></div>
+                    </div>
+                    <p>Total Number Of Friends: <span class="badge badge-success" data-bind="text:numberOfFriends()"></span></p>
+
+
+                    <div class="card" style="margin-bottom: 20px">
+                        <div class="card-header">
+                            <h3>Friend List</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul data-bind="foreach:{ data: friends, as: 'friend' }" style="padding-left: 0">
+                                <li data-bind="css: $parent.isBestFriend(friend);using: friend" style="display: flex;justify-content: space-between;flex-wrap:wrap;align-items: center">
+                                    <div>
+                                        <span data-bind="text:firstname"></span> <span data-bind="text:lastname"></span>
+                                    </div>
+                                    <span data-bind="if: bestFriend" class="badge badge-success">Best Friend</span>
+                                    <span data-bind="ifnot: bestFriend" class="badge badge-info">Normal Friend</span>
+                                    <button class="btn" data-bind="click: $parent.removeFriend">Remove</button>
+                                </li>
+                            </ul>
+                            <p data-bind="visible: friends().length < 1" class="text-center">No Friend Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+    <script>
+        ViewModel = {
+            firstname: ko.observable("Vasu"),
+            lastname: ko.observable("Chaudhary"),
+            friend_firstname: ko.observable(""),
+            friend_lastname: ko.observable(""),
+            bestFriend: ko.observable(false),
+            addFriend: () => {
+                ViewModel.friends.push({
+                    firstname: ViewModel.friend_firstname(),
+                    lastname: ViewModel.friend_lastname(),
+                    bestFriend: ViewModel.bestFriend(),
+                })
+            },
+            removeFriend:  (friend) =>  ViewModel.friends.remove(friend)
+        };
+        const getFirstCharacter = (str) => {
+            if (typeof str === 'string' && str.length > 0) {
+                return str.charAt(0).toUpperCase();
+            }
+
+            return '';
+        }
+        ViewModel.name = ko.computed(() => ViewModel.firstname() + ' ' + ViewModel.lastname())
+        ViewModel.shortname = ko.pureComputed(() => getFirstCharacter(ViewModel.firstname()) + getFirstCharacter(ViewModel.lastname()))
+        ViewModel.numberOfFriends = () => ViewModel.friends().length;
+        ViewModel.name.subscribe((name) => console.log('Name: ' + name))
+        ViewModel.isBestFriend = (friend) => friend.bestFriend ? 'best_friend' : 'normal_friend';
+
+        const friends = [
+            {
+                firstname: 'Vasu',
+                lastname: 'Chaudhary',
+                bestFriend: false
+            },
+            {
+                firstname: 'Narayan',
+                lastname: 'Baisla',
+                bestFriend: true
+            },
+            {
+                firstname: 'Abhishek',
+                lastname: 'Kumar',
+                bestFriend: true
+            }
+        ];
+
+        ViewModel.friends = ko.observableArray(friends)
+        ko.applyBindings(ViewModel);
+    </script>
+</body>
+</html>

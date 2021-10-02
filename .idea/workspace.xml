@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="513664ac-e5fb-4a30-a971-549c94580100" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/chatroom.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/user.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/user/group.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/user/user.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/handlers/error-handler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/oauth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/chatroom.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/group.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/user.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/group.repository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/chatroom.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/group.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/app.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/base.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/button.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/header.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/whatapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/whatapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.html" beforeDir="false" afterPath="$PROJECT_DIR$/notes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +61,14 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/.cache/JetBrains/PhpStorm2021.1/javascript/typings/express/4.17.1/node_modules/@types/body-parser/index.d.ts" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/server.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../chatwhizz/server.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/model/group.model.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/node_modules/mongoose/index.d.ts" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1uwyG8lop92SOqDMsDZ3n87R0xb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,40 +79,64 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NEW_TOOLWINDOW_STRIPE_DEFAULTS" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.google.cloudcode.ide_session_index" value="20210707_0004" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210711_0003" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.13.1" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.17.4" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Notes" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="service.view.auto.scroll.to.source" value="true" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
-  <component name="RunManager" selected="Node.js.server.js">
-    <configuration name="server.js" type="NodeJSConfigurationType" singleton="false" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/server.js" working-dir="$PROJECT_DIR$">
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes" />
+      <recent name="$PROJECT_DIR$/controllers" />
+      <recent name="$PROJECT_DIR$/controllers/user" />
+      <recent name="$PROJECT_DIR$/model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="openRunningConfigInTab" value="true" />
+  </component>
+  <component name="RunManager" selected="HTTP Request.http-requests-log#1">
+    <configuration name="http-requests-log#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="http-requests-log#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="http-requests-log#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="http-requests-log#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" index="5" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="http-requests-log#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" index="6" runType="Run single request">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.server.js" />
-        <item itemvalue="npm.test" />
+        <item itemvalue="HTTP Request.http-requests-log#1" />
+        <item itemvalue="HTTP Request.http-requests-log#6" />
+        <item itemvalue="HTTP Request.http-requests-log#5" />
+        <item itemvalue="HTTP Request.http-requests-log#4" />
+        <item itemvalue="HTTP Request.http-requests-log#3" />
       </list>
     </recent_temporary>
   </component>
@@ -94,7 +153,50 @@
       <workItem from="1625596108520" duration="2583000" />
       <workItem from="1625636066564" duration="5956000" />
       <workItem from="1625658075774" duration="599000" />
-      <workItem from="1625678191106" duration="2209000" />
+      <workItem from="1625678191106" duration="4560000" />
+      <workItem from="1625724420320" duration="598000" />
+      <workItem from="1625725077531" duration="3729000" />
+      <workItem from="1625811998214" duration="7000" />
+      <workItem from="1625917798490" duration="2075000" />
+      <workItem from="1625920523524" duration="2237000" />
+      <workItem from="1626002476142" duration="694000" />
+      <workItem from="1626003216316" duration="4157000" />
+      <workItem from="1626011824760" duration="417000" />
+      <workItem from="1626012301371" duration="4821000" />
+      <workItem from="1626070641238" duration="3896000" />
+      <workItem from="1626085592614" duration="2460000" />
+      <workItem from="1626095743631" duration="9410000" />
+      <workItem from="1626111382756" duration="7310000" />
+      <workItem from="1626152882603" duration="7061000" />
+      <workItem from="1626175060981" duration="142000" />
+      <workItem from="1626243418141" duration="4213000" />
+      <workItem from="1626262565442" duration="6308000" />
+      <workItem from="1626283364086" duration="13395000" />
+      <workItem from="1626328393544" duration="3275000" />
+      <workItem from="1626337174949" duration="5170000" />
+      <workItem from="1626412836464" duration="3659000" />
+      <workItem from="1626424759179" duration="19192000" />
+      <workItem from="1626606323897" duration="126000" />
+      <workItem from="1626703169502" duration="21000" />
+      <workItem from="1626703424712" duration="658000" />
+      <workItem from="1626791625103" duration="1588000" />
+      <workItem from="1626890897441" duration="2007000" />
+      <workItem from="1626937034258" duration="918000" />
+      <workItem from="1626949628976" duration="73000" />
+      <workItem from="1626972213867" duration="334000" />
+      <workItem from="1627990789307" duration="1957000" />
+      <workItem from="1628058766343" duration="17000" />
+      <workItem from="1629545616195" duration="308000" />
+      <workItem from="1629545972995" duration="659000" />
+      <workItem from="1629546793566" duration="2710000" />
+      <workItem from="1629796439273" duration="980000" />
+      <workItem from="1629802826917" duration="599000" />
+      <workItem from="1630475317693" duration="1052000" />
+      <workItem from="1630477417488" duration="4739000" />
+      <workItem from="1631034616155" duration="17000" />
+      <workItem from="1631168682011" duration="98000" />
+      <workItem from="1631169938026" duration="2557000" />
+      <workItem from="1631253581234" duration="22000" />
     </task>
     <servers />
   </component>
@@ -111,6 +213,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "_id": "60ed339a484c883479cca800",
+      "name": "Vasu Chaudhary",
+      "email": "vasu.chaudhary180@webkul.com",
+      "status": true,
+      "__v": 0
+    },
+    {
+      "_id": "60ed33ca484c883479cca803",
+      "name": "Harsh Chaudhary",
+      "email": "harshchoudhary326@gmail.com",
+      "status": true,
+      "__v": 0
+    },
+    {
+      "_id": "60ed3423484c883479cca805",
+      "name": "Aryamann Baliyan",
+      "email": "akgroupofcompany701@@gmail.com",
+      "status": true,
+      "__v": 0
+    },
+    {
+      "_id": "60ed3a86484c883479cca80c",
+      "email": "vasuchaudhary42@gmail.com",
+      "name": "Manu Chaudhary",
+      "status": true,
+      "__v": 0
+    }
+  ]
+}

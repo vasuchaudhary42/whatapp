@@ -1,0 +1,22 @@
+GET http://localhost:5000/chatroom
+Accept: application/json; charset=utf-8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZjE2MzliYmE5NTViODIzYzg3Y2Y1YSIsImlhdCI6MTYyNjQzMjQ0MH0.X1KVP5WcMwfRPxLiEqlLqJQ2oJ_CTmhVpZlEM1GIzHE
+
+<> 2021-07-16T170705.200.json
+
+###
+
+GET http://localhost:5000/chatroom
+Accept: application/json; charset=utf-8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZjE2MzliYmE5NTViODIzYzg3Y2Y1YSIsImlhdCI6MTYyNjQzMjQ0MH0.X1KVP5WcMwfRPxLiEqlLqJQ2oJ_CTmhVpZlEM1GIzHE
+
+<> 2021-07-16T162152.200.json
+
+###
+
+GET http://localhost:5000/chatroom
+Accept: application/json; charset=utf-8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZjE2MzliYmE5NTViODIzYzg3Y2Y1YSIsImlhdCI6MTYyNjQzMjQ0MH0.X1KVP5WcMwfRPxLiEqlLqJQ2oJ_CTmhVpZlEM1GIzHE

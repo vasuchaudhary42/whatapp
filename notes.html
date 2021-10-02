@@ -17,9 +17,70 @@ process    -   Info About ENV where the program is being executed
 
     // global dpendency - use it in any project
     npm install -g <packagename/>
-    sudo install -g <packagename/> ()
+    sudo npm 4  install -g <packagename/> (mac)
 
     package.json - manifest file store important info about project package
     npm init(step by step, press enter to skip)
     npm init -y (everything default)
+
+    --save-dev    or   -D
+
+    npm i bootstrap --save-dev
+    npm i bootstrap -D
+
+    npm uninstall bootstrap
 </pre>
+
+Dependency:
+
+nodemon (For Watch Changes  )
+
+
+GIT COMMAND:
+git remote add origin git@github.com:vasuchaudhary42/whatapp.git
+git branch -M main
+git push -u origin main
+
+Exponent (Des)
+javascript.info
+
+
+
+POST http://localhost:5000/user/register
+Accept: application/json; charset=utf-8
+Content-Type: application/json
+
+{
+"name": "Vasu Chaudhary",
+"email": "vasu.chaudhary180@webkul.com",
+"password": "webkul123"
+}
+
+###
+
+POST http://localhost:5000/user/login
+Accept: application/json; charset=utf-8
+Content-Type: application/json
+
+{
+"email": "vasu.chaudhary180@webkul.com",
+"password": "webkul123"
+}
+
+###
+
+GET http://localhost:5000/chatroom
+Accept: application/json; charset=utf-8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZjE2MzliYmE5NTViODIzYzg3Y2Y1YSIsImlhdCI6MTYyNjQzMjQ0MH0.X1KVP5WcMwfRPxLiEqlLqJQ2oJ_CTmhVpZlEM1GIzHE
+
+###
+
+POST http://localhost:5000/chatroom
+Accept: application/json; charset=utf-8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZjE2MzliYmE5NTViODIzYzg3Y2Y1YSIsImlhdCI6MTYyNjQzMjQ0MH0.X1KVP5WcMwfRPxLiEqlLqJQ2oJ_CTmhVpZlEM1GIzHE
+
+{
+"name": "Training"
+}

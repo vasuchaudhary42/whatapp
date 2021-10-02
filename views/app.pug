@@ -1,0 +1,65 @@
+extends base
+include button
+block header
+    - var authorised = true;
+    include header
+append content
+    +button({id: "add_button", class: "btn btn-primary", name:"add", type:"submit"}, "Click Me")
+    - var classes = ['container', 'full-size']
+    p(class=classes) classes
+    - var attributes = {};
+    - attributes.class = 'baz';
+    - attributes.id = 'baz';
+    - attributes['data-bind'] = 'bind';
+    p&attributes(attributes) attributes
+
+    -var friends = 3
+    case friends
+        when 0
+        when 1
+            p you have very few friends
+        when 2
+            p you have #{friends} friends
+        default
+            p you have many friends
+    ul
+        - for (var x = 0; x < 3; x++)
+            li item #{x}
+
+    - var list = [{firstname: "Vasu", lastname: "Chaudhary"}, {firstname: "Vasu", lastname: "Chaudhary"}, {firstname: "Vasu", lastname: "Chaudhary"},]
+    ul
+        each item in list
+            li #{item.name}
+
+    - var list = ["Uno", "Dos", "Tres", "Cuatro", "Cinco", "Seis"]
+    ul
+        each item in list
+            li=item
+    ul
+        each val in [1, 2, 3, 4, 5]
+            li= val
+    ul
+        each val, index in ['zero', 'one', 'two']
+            li= index + ': ' + val
+
+    ul
+        each val, key in {1: 'one', 2: 'two', 3: 'three'}
+            li= key + ': ' + val
+
+    - var values = [];
+    ul
+        each val in values.length ? values : ['There are no values']
+            li= val
+    - var values = [];
+    ul
+        each val in values
+            li= val
+        else
+            li There are no values
+    - var n = 0;
+    ul
+        while n < 4
+            li= n++
+block prepend footer
+    #footer
+        p some footer content
